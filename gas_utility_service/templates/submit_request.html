@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+  <head>
+    <title>Service Request</title>
+    <link rel="stylesheet" href="{% static 'asset/css/bootstrap.min.css' %}" />
+  </head>
+  <body>
+    <!--login form start-->
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4 shadow mt-2 p-4 mx-auto">
+          <h2 class="text-center text-primary">Login Form</h2>
+          <form class="" method="post">
+            {% csrf_token %} {% if errmsg %}
+            <div class="alert alert-danger">{{errmsg}}</div>
+            {% endif %}
+           
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label"
+                >Mobile Number:</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                name="mm"
+                id="Input2"
+                placeholder=""
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput3" class="form-label"
+                >Request Type:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="Input3"
+                name="request"
+                placeholder=""
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput4" class="form-label"
+                >Details:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="Input4"
+                name="detail"
+                placeholder=""
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput5" class="form-label"
+                >Attachment:(adhar or pan)</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="Input5"
+                name="atac"
+                placeholder=""
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="submit"
+                class="btn btn-primary form-control"
+                value="Login"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--login form end-->
+    <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+  </body>
+</html>
